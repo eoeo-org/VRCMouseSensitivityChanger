@@ -1,0 +1,15 @@
+[package]
+name = "VRCMouseSensitivityChanger"
+version = "0.0.0"
+edition = "2021"
+
+[dependencies]
+eframe = "0.30.0"
+winreg = "0.53.0"
+
+[profile.release]
+strip = "symbols"
+lto = "fat"
+codegen-units = 1
+opt-level = "z"
+panic = "abort"
